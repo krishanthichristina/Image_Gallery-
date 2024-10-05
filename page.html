@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page 1
+    </title>
+    <style>
+       
+
+        :root {
+            --index: calc(1vw + 1vh);
+            --transition: cubic-bezier(.1, .7, 0, 1);
+        }
+
+        body {
+            background-color: #000;
+        }
+
+       
+
+        .inner-containers {
+            display: flex;
+            gap: 0.5rem;
+            perspective: calc(var(--index) * 70);
+        }
+
+        .inner-container {
+            width: calc(var(--index) * 4);
+            height: calc(var(--index) * 11);
+            background-color: #222;
+            background-size: cover;
+            cursor: pointer;
+            border-radius: 20px;
+            filter: grayscale(1) brightness(.5);
+            transition: transform 1.25s var(--transition), filter 3s var(--transition), width 1.25s var(--transition);
+            box-shadow: 0 0 2px #00fffc;
+            margin-bottom: 5%;
+
+        }
+
+        
+
+     
+
+        .inner-containers .inner-container:hover {
+            filter: inherit;
+            transform: translateZ(calc(var(--index) * 10));
+            width: 250px;
+        }
+
+        /*Right*/
+
+        .inner-containers .inner-container:hover+* {
+            filter: inherit;
+            transform: translateZ(calc(var(--index) * 8.5)) rotateY(35deg);
+            z-index: -1;
+            width: 160px;
+        }
+
+        .inner-containers .inner-container:hover+*+* {
+            filter: inherit;
+            transform: translateZ(calc(var(--index) * 5.6)) rotateY(40deg);
+            z-index: -2;
+            width: 80px;
+        }
+
+        .inner-containers .inner-container:hover+*+*+* {
+            filter: inherit;
+            transform: translateZ(calc(var(--index) * 2.5)) rotateY(30deg);
+            z-index: -3;
+            width: 40px;
+        }
+
+        .inner-containers .inner-container:hover+*+*+*+* {
+            filter: inherit;
+            transform: translateZ(calc(var(--index) * .6)) rotateY(15deg);
+            z-index: -4;
+            width: 20px;
+        }
+
+
+
+        .inner-containers .inner-container:has(+ :hover) {
+            filter: inherit;
+            transform: translateZ(calc(var(--index) * 8.5)) rotateY(-35deg);
+        }
+
+        .inner-containers .inner-container:has(+ * + :hover) {
+            filter: inherit;
+            transform: translateZ(calc(var(--index) * 5.6)) rotateY(-40deg);
+        }
+
+        .inner-containers .inner-container:has(+ * + * + :hover) {
+            filter: inherit;
+            transform: translateZ(calc(var(--index) * 2.5)) rotateY(-30deg);
+        }
+
+        .inner-containers .inner-container:has(+ * + * + * + :hover) {
+            filter: inherit;
+            transform: translateZ(calc(var(--index) * .6)) rotateY(-15deg);
+        }
+
+        .inner-containers .inner-container:active,
+        .inner-containers .inner-container:focus {
+            width: 28vw;
+            filter: inherit;
+            z-index: 100;
+            transform: translateZ(calc(var(--index) * 10));
+            margin: 0 .45vw;
+        }
+
+    
+
+        .whole-containers {
+            width: 70%;
+            margin: 0 auto; 
+        }
+        
+    </style>
+</head>
+
+<body>
+   
+    <div class="whole-containers">
+    
+        <div class="inner-containers">
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/101+\ Most\ Instagrammable\ places\ in\ Seoul\,\ South\ Korea\ -\ Zen\ Moments\ in\ Korea.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/12\ Best\ Places\ In\ South\ Korea\ To\ Visit.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/18\ Best\ Things\ to\ Do\ in\ Seoul\ For\ An\ Unforgettable\ Trip.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/A\ Guide\ to\ Gamcheon\ Culture\ Village_\ the\ Most\ Charming\ Place\ in\ Korea.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Busan\ Travel\ Guide_\ Best\ Things\ to\ Do\ in\ Korea’s\ Ocean\ City.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Geoje\ Island\ _\ Best\ things\ to\ do\ in\ Geoje\ Island\ -\ Adventures\ With\ NieNie.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Hongdae\,\ Seoul\ -\ 28\ Brilliant\ Things\ To\ Do\ +\ Photos\ 2024\ -\ CK\ Travels.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Incheon\ International\ Airport\ Terminal\ 2\ _\ Incheon\,\ South\ Korea.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Jeju\ island.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Jeonju\ Hanok\ Village\,\ South\ Korea\ _\ Busanpedia.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Namsan\ Tower.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Signiel\ Seoul\ _\ KIWICOLLECTION_COM.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/South\ Korea.jpeg)">
+            </div>
+        </div>
+   
+
+        <div class="inner-containers">
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/South\ Korea\ Busan\ neon\ lights\ street.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/South\ Korea\ Busan\ neon\ lights\ street.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Spring\ in\ Korea\ -\ 15\ Best\ Places\ to\ See\ Korea\ in\ Spring.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Suwon\ Starfield\ Library.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/The\ 12\ best\ things\ to\ do\ &\ photo\ spots\ in\ Seoul\ -\ with\ map\ -\ voyagefox.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/The\ Complete\ Busan\ 3\ day\ itinerary\ for\ First\ Time\ Visitors\ —\ Helena\ Bradbury.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/traveling\ travel\ inspo\ wanderlust\ travel\ life\ vacation\ aesthetic\ \ \ best\ countries\ to\ visit.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/101+\ Most\ Instagrammable\ places\ in\ Seoul\,\ South\ Korea\ -\ Zen\ Moments\ in\ Korea.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/12\ Best\ Places\ In\ South\ Korea\ To\ Visit.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/18\ Best\ Things\ to\ Do\ in\ Seoul\ For\ An\ Unforgettable\ Trip.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/A\ Guide\ to\ Gamcheon\ Culture\ Village_\ the\ Most\ Charming\ Place\ in\ Korea.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Geoje\ Island\ _\ Best\ things\ to\ do\ in\ Geoje\ Island\ -\ Adventures\ With\ NieNie.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Hongdae\,\ Seoul\ -\ 28\ Brilliant\ Things\ To\ Do\ +\ Photos\ 2024\ -\ CK\ Travels.jpeg)">
+            </div>
+        </div>
+
+
+        <div class="inner-containers">
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/101+\ Most\ Instagrammable\ places\ in\ Seoul\,\ South\ Korea\ -\ Zen\ Moments\ in\ Korea.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/12\ Best\ Places\ In\ South\ Korea\ To\ Visit.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/18\ Best\ Things\ to\ Do\ in\ Seoul\ For\ An\ Unforgettable\ Trip.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/A\ Guide\ to\ Gamcheon\ Culture\ Village_\ the\ Most\ Charming\ Place\ in\ Korea.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Busan\ Travel\ Guide_\ Best\ Things\ to\ Do\ in\ Korea’s\ Ocean\ City.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Geoje\ Island\ _\ Best\ things\ to\ do\ in\ Geoje\ Island\ -\ Adventures\ With\ NieNie.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Hongdae\,\ Seoul\ -\ 28\ Brilliant\ Things\ To\ Do\ +\ Photos\ 2024\ -\ CK\ Travels.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Incheon\ International\ Airport\ Terminal\ 2\ _\ Incheon\,\ South\ Korea.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Jeju\ island.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Jeonju\ Hanok\ Village\,\ South\ Korea\ _\ Busanpedia.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Namsan\ Tower.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Signiel\ Seoul\ _\ KIWICOLLECTION_COM.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/South\ Korea.jpeg)">
+            </div>
+        </div>
+   
+
+        <div class="inner-containers">
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/South\ Korea\ Busan\ neon\ lights\ street.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/South\ Korea\ Busan\ neon\ lights\ street.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Spring\ in\ Korea\ -\ 15\ Best\ Places\ to\ See\ Korea\ in\ Spring.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Suwon\ Starfield\ Library.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/The\ 12\ best\ things\ to\ do\ &\ photo\ spots\ in\ Seoul\ -\ with\ map\ -\ voyagefox.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/The\ Complete\ Busan\ 3\ day\ itinerary\ for\ First\ Time\ Visitors\ —\ Helena\ Bradbury.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/traveling\ travel\ inspo\ wanderlust\ travel\ life\ vacation\ aesthetic\ \ \ best\ countries\ to\ visit.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/101+\ Most\ Instagrammable\ places\ in\ Seoul\,\ South\ Korea\ -\ Zen\ Moments\ in\ Korea.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/12\ Best\ Places\ In\ South\ Korea\ To\ Visit.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/18\ Best\ Things\ to\ Do\ in\ Seoul\ For\ An\ Unforgettable\ Trip.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/A\ Guide\ to\ Gamcheon\ Culture\ Village_\ the\ Most\ Charming\ Place\ in\ Korea.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Geoje\ Island\ _\ Best\ things\ to\ do\ in\ Geoje\ Island\ -\ Adventures\ With\ NieNie.jpeg)">
+            </div>
+            <div class="inner-container" tabindex="0"
+                style="background-image: url(photos/SK/Hongdae\,\ Seoul\ -\ 28\ Brilliant\ Things\ To\ Do\ +\ Photos\ 2024\ -\ CK\ Travels.jpeg)">
+            </div>
+        </div>
+
+    </div>
+
+
+    </div>
+
+
+    
+  
+</body>
+
+</html>
